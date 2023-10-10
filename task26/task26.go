@@ -6,15 +6,21 @@ import (
 )
 
 func CheckUniq(str string) bool {
+	// Преобразуем строку к нижнему регистру для регистронезависимой проверки
 	str = strings.ToLower(str)
 	data := []byte(str)
+	// Создаем карту для отслеживания уникальных символов
 	mapData := make(map[byte]bool)
+	// Перебираем каждый символ в строке
 	for _, item := range data {
+		// Если символ уже есть в карте, значит он не уникален, возвращаем false
 		if mapData[item] {
 			return false
 		}
+		// Добавляем символ в карту
 		mapData[item] = true
 	}
+	// Если прошли через всю строку без повторений, возвращаем true
 	return true
 }
 

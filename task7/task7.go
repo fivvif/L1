@@ -6,6 +6,7 @@ import (
 )
 
 func Task7() {
+	// используем мютексы для эксклюзивного доступа горутины к мапе
 	karta := make(map[string]int)
 	var mutex sync.Mutex
 	var wg sync.WaitGroup
@@ -14,18 +15,23 @@ func Task7() {
 		go func(i int) {
 			defer wg.Done()
 			key := fmt.Sprintf("key%d", i)
+			// захватывыем мютекс
 			mutex.Lock()
+			// записываем в мапу
 			karta[key] = i * 10
+			// отпускаем мютекс
 			mutex.Unlock()
 			fmt.Printf("Горутина %d записала: %s -> %d\n", i, key, i*10)
 		}(i)
 	}
+	// специальная структура для работы с мапами в конкурентной среде
 	var mapka sync.Map
 	for i := 100; i < 125; i++ {
 		wg.Add(1)
 		go func(i int) {
 			defer wg.Done()
 			key := fmt.Sprintf("key%d", i)
+			// используем метод Store для записи в мапу, не используя мютексы
 			mapka.Store(key, i*10)
 			fmt.Printf("Горутина %d записала: %s -> %d\n", i, key, i*10)
 		}(i)

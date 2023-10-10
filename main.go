@@ -1,6 +1,8 @@
 package main
 
-import "L1/task5"
+import (
+	"L1/task8"
+)
 
 func main() {
 	//task1.Task1()
@@ -8,9 +10,10 @@ func main() {
 	//task3.Task3()
 	//task4.Task4(22)
 	//task4.Task4_2(22)
-	task5.Task5(10)
+	//task5.Task5(10)
 	//task6.Task6()
 	//task7.Task7()
+	task8.Task8()
 	//task10.Task10()
 	//task11.Task11()
 	//task12.Task12()
@@ -18,6 +21,9 @@ func main() {
 	//task13.Task13_2()
 	//task14.Task14()
 	//task15.Task15()
+	//task16.Task16()
+	//task17.Task17()
+	//task18.Task18()
 	//task19.Task19()
 	//task20.Task20()
 	//task21.Task21()

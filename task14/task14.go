@@ -19,6 +19,8 @@ func Task14() {
 
 }
 
+// принимаем пустой интерфейс, то есть любой тип данных
+// для того чтобы узнать тип данных используем пакет reflect
 func checkType(i interface{}) {
 	switch reflect.TypeOf(i).Kind() {
 	case reflect.Int:

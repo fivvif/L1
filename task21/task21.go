@@ -48,7 +48,7 @@ func Task21() {
 	adapter.Print("Hello, legacy world!")
 }
 
-/////task21_2
+//task21_2
 
 type Shape interface {
 	Area() float64
