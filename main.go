@@ -1,9 +1,5 @@
 package main
 
-import (
-	"L1/task8"
-)
-
 func main() {
 	//task1.Task1()
 	//task2.Task2()
@@ -13,7 +9,7 @@ func main() {
 	//task5.Task5(10)
 	//task6.Task6()
 	//task7.Task7()
-	task8.Task8()
+	//task8.Task8()
 	//task10.Task10()
 	//task11.Task11()
 	//task12.Task12()
