@@ -8,13 +8,12 @@ func Task8() {
 
 }
 
-func setBit(num int64, i uint, bitValue int) int64 {
-	fmt.Printf("%b\n", num)
+func setBit(n int64, i uint, bitValue int) int64 {
 	if bitValue == 1 {
-		num |= 1 << i
-	} else if bitValue == 0 {
-		num &= ^(1 << i)
+		// Установить i-й бит в 1
+		return n | (1 << i)
+	} else {
+		// Установить i-й бит в 0
+		return n &^ (1 << i)
 	}
-	fmt.Printf("%b\n", num)
-	return num
 }
