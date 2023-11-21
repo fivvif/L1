@@ -10,6 +10,7 @@ func main() {
 	//task6.Task6()
 	//task7.Task7()
 	//task8.Task8()
+	//task9.Task9()
 	//task10.Task10()
 	//task11.Task11()
 	//task12.Task12()
@@ -29,4 +30,5 @@ func main() {
 	//task24.Task24()
 	//task25.Task25()
 	//task26.Task26()
+
 }
